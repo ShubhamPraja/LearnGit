@@ -1,24 +1,26 @@
-import logo from './logo.svg';
+
 import './App.css';
+import Ask from './Component/Ask.jsx'
+import Job from './Component/Job.jsx'
+import Top from './Component/Top.js'
+import Show from './Component/Show.js'
+import NevBar from './Component/NevBar.jsx'
+import { Switch, Route } from 'react-router-dom';
+import Design from './Component/Design.jsx'
+
+import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <Switch>
+        <Route exact path="/top" component={Top}></Route>
+        <Route exact path="/ask" component={Ask}></Route>
+        <Route exact path="/show" component={Show}></Route>
+        <Route exact path="/job" component={Job}></Route>
+      </Switch>
+      <Design></Design>
+    </>
   );
 }
 
