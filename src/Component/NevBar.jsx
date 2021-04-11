@@ -4,6 +4,7 @@ import { NavLink } from 'react-router-dom';
 const NevBar = () => {
   return (
     <>
+      <h1>Shubham</h1>
       <div className="container-fluid nav_bg ">
         <div className="row">
           <div className="col-10 mx-auto">
